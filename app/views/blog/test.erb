@@ -3,5 +3,10 @@
 		안녕하세요! <br/>
 		blog폴더의 test.erb입니다!<br/>
 		<%= @temp %>
+		<% if @condition %>
+			<p>주어진 조건이 참입니다.</p>
+		<% else %>
+			<p>주어진 조건이 거짓입니다.</p>
+		<% end %>
 	</h1>
 </center>

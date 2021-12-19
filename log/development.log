@@ -189,3 +189,53 @@ Processing by BlogController#test as HTML
 Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 0.0ms)
 
 
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at /usr/local/lib/ruby/gems/2.6.0/gems/activesupport-5.2.6/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/test" for 172.17.0.1 at 2021-12-19 09:50:51 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogController#test as HTML
+  Rendering blog/test.erb within layouts/application
+  Rendered blog/test.erb within layouts/application (4.7ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 194ms (Views: 163.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/test" for 172.17.0.1 at 2021-12-19 09:59:09 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogController#test as HTML
+  Rendering blog/test.erb within layouts/application
+  Rendered blog/test.erb within layouts/application (0.6ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 97ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/test" for 172.17.0.1 at 2021-12-19 09:59:30 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogController#test as HTML
+  Rendering blog/test.erb within layouts/application
+  Rendered blog/test.erb within layouts/application (0.6ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/test" for 172.17.0.1 at 2021-12-19 09:59:36 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogController#test as HTML
+  Rendering blog/test.erb within layouts/application
+  Rendered blog/test.erb within layouts/application (7.2ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
