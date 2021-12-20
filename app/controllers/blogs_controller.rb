@@ -13,6 +13,7 @@ class BlogsController < ApplicationController
   # GET /blogs/new
   def new
     @blog = Blog.new
+	  redirect_to = "/blogs/#{@blog.id}"
   end
 
   # GET /blogs/1/edit
